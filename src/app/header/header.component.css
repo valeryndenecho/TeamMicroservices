@@ -1,0 +1,39 @@
+.navbar {
+  margin:0;
+  border: 0;
+  background-color: dimgray;
+  padding: 5px 20px 5px 20px;
+/*  text-align: right;*/
+  -moz-border-radius: 0;
+}
+
+.navbar-brand {
+  padding: 0px 15px 0px 0px;
+}
+
+.nav {
+  text-align: right;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+ /* text-align: center;*/
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: gray;
+}

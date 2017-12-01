@@ -1,0 +1,38 @@
+@import "../../css/global.css";
+
+.row {
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  padding:15px;
+}
+
+tr {
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+tr.selected {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+tr:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+
+#playerList {
+/*  height: 60vh;
+  overflow-y: scroll;
+  margin: 0px 0px 0px 50px;
+  border: 1px groove;
+  border-radius: 5px;*/
+}

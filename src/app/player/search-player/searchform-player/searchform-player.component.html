@@ -1,0 +1,10 @@
+<div id="playerSearchForm" class="container">
+  <form (submit)="onSearch()" role="form">
+    <div class="form-group">
+      <div>
+        <input id="searchfield" placeholder="Search for id or firstname of player" class="form-control" [(ngModel)]="pid" name="pid">
+        <!--<button class="btn btn-default" >Search</button>-->
+      </div>
+    </div>
+  </form>
+</div>

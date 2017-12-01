@@ -1,0 +1,10 @@
+@import "../../../css/global.css";
+
+.btn-default {
+  float: inherit;
+}
+
+input::placeholder {
+  font-family: "Helvetica Neue", sans-serif;
+  font-style: italic;
+}

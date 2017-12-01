@@ -1,0 +1,16 @@
+<div class="row" *ngIf="player">
+  <h2>Player's Info</h2>
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <div class="pull-right">
+        <a [routerLink]="['/updateplayer', player.id]" class="fa fa-pencil-square-o">Edit</a>
+        <a [routerLink]="['/searchplayers']" (click)="deletePlayer(player.id)" class="btn fa fa-trash"></a>
+      </div>
+      <ul>
+        <li><b>Id:</b> {{player.id}}</li>
+        <li><b>Firstname:</b> {{player.vorname}}</li>
+        <li><b>Lastname:</b> {{player.name}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

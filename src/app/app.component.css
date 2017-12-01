@@ -1,0 +1,19 @@
+#rootApp {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainContent {
+  overflow: auto;
+  width: 100%;
+  /* this needs to be bigger than the height of the footer*/
+  padding-bottom: 150px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto; /*Die drei könnte auch in einem zusammengefasst: flex: 1 0 auto */
+
+}
+

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "./app/scss/variables";
+@import "./app/scss/mixins";
+
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import './app/scss/globals';
+*/
+
+
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ng2-toasty/style-bootstrap.css";
+
+html {
+  margin:0;
+  padding:0;
+}
+body {
+  background-color: #FAFAFA;
+  margin:0;
+  padding:0;
+}
+
+.sorted {
+  color: red;
+}

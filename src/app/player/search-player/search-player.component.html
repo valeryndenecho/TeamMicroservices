@@ -1,0 +1,33 @@
+<ng2-toasty [position]="'top-center'"></ng2-toasty>
+<div id="searchPlayerComponent">
+  <h1 id="pageHeadline">{{pageTitle | uppercase }}</h1>
+  <div class="form-row">
+    <app-searchform-player (id)="getPlayer($event)"></app-searchform-player>
+  </div>
+  <div class="row" *ngIf="players && players.content && players.content.length > 0">
+    <div id="playerList" class="col-xs-3">
+      <table
+        >
+        <thead>
+          <tr>
+            <th (click)="setSortDirection('name')" [class.sorted]="sortBy === 'name'">Name <i *ngIf="sortBy === 'name'" class="fa" [ngClass]="{'fa-arrow-down': sortDir === 'ASC', 'fa-arrow-up': sortDir === 'DESC'}" ></i></th>
+            <th (click)="setSortDirection('vorname')" [class.sorted]="sortBy === 'vorname'">First Name <i *ngIf="sortBy === 'vorname'" class="fa" [ngClass]="{'fa-arrow-down': sortDir === 'ASC', 'fa-arrow-up': sortDir === 'DESC'}" ></i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let player of players.content | paginate: { itemsPerPage: params.size, currentPage: p, totalItems: players.totalElements}" [class.selected]="player === selectedPlayer" (click)="onSelect(player)" class="tableItem">
+            <td><strong>{{player.name | uppercase}}</strong></td>
+            <td>{{player.vorname}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xs-6">
+      <app-player-detail [player]="selectedPlayer"></app-player-detail>
+    </div>
+  </div>
+  <div>
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+  </div>
+
+</div>

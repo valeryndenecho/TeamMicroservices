@@ -1,0 +1,9 @@
+@import "../css/global.css";
+
+#teamGif {
+  height: auto;
+  width: 450px;
+  padding-top: 100px;
+  display: block;
+  margin: 0 auto;
+}
