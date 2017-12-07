@@ -17,8 +17,10 @@ export class SearchPlayerComponent implements OnInit {
   private searchparam: any;
   private selectedPlayer: Player;
   private event: any;
+  public q?: any;
 
   public params = {
+    q: '',
     size: 10,
     page: 0,
     sort: 'name,ASC'
@@ -36,8 +38,10 @@ export class SearchPlayerComponent implements OnInit {
 
   getPlayer(searchparam: any) {
     this.searchparam = searchparam;
+    this.params.q = this.searchparam;
     this.players.length = 0;
-    if (searchparam) {
+    this.getAllPlayers();
+/*    if (searchparam) {
       if (Number(searchparam)) {
         this.getPlayerById(searchparam);
       } else {
@@ -45,7 +49,8 @@ export class SearchPlayerComponent implements OnInit {
       }
     } else {
       this.getAllPlayers();
-    }
+    }*/
+    console.log(this.params);
   }
 
   setSortDirection(newSortValue) {
